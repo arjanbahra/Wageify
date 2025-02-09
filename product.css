@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #EDEDF2;
+    color: #1A1A1A;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+nav {
+    display: flex;
+    gap: 25px;
+    background-color: #EDEDF2;
+}
+
+nav a, .auth-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.auth-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Product Page */
+.product-page {
+    display: flex;
+    background-color: #f9f9f9; /* Light background for a cleaner look */
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    border-radius: 10px; /* Optional: add rounded corners for a softer appearance */
+}
+
+/* Image Carousel */
+.product-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 100%;
+    display: none; /* Initially hidden */
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%); /* Centers the arrows vertically */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.left-arrow {
+    left: 10px; /* Arrow positioned at the left side */
+}
+
+.right-arrow {
+    right: 10px; /* Arrow positioned at the right side */
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-arrow i {
+    font-size: 24px; /* Icon size for the arrows */
+}
+
+
+/* Product Details */
+.product-details {
+    width: 45%;
+    text-align: left;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for product details */
+    border-radius: 10px; /* Optional: add rounded corners for a cleaner look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: soft shadow for depth */
+}
+
+.product-details h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333; /* Darker text for better readability */
+    margin-top: 10px;
+}
+
+.features {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.features li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.payment-buttons {
+    display: flex;         /* Align items in a row */
+    gap: 15px;            /* Add space between buttons */
+    justify-content: center; /* Center them horizontally */
+    align-items: center;  /* Align them vertically */
+}
+
+.btn-primary-paypal {
+    margin-top: 30px;
+    background-color: #ffc439; /* Set yellow background */
+    border-radius: 0.9375em;
+    color: white; /* Make text white */
+    padding: 1em 4.1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Aligns logo and text vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Remove border for a clean look */
+}
+
+.btn-logo-paypal {
+    width: 87px; /* Adjust the size of the logo */
+    background-color: #ffc439; /* Set yellow background */
+    height: 23px;
+    margin-right: 10px; /* Adds space between logo and text */
+}
+
+.btn-primary-paypal:active {
+    transform: translateY(0);
+}
+
+.btn-primary-googlepay {
+    margin-top: 30px;
+    background-color: black; /* Set yellow background */
+    border-radius: 0.9375em;
+    color: white; /* Make text white */
+    padding: 1em 5em; /* Increase left & right padding */
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    font-size: 18px;
+    display: flex;
+    
+    align-items: center; /* Aligns logo and text vertically */
+    justify-content: center; /* Centers content horizontally */
+    border: none; /* Remove border for a clean look */
+}
+
+.btn-logo-googlepay {
+    width: 55px; /* Adjust the size of the logo */
+    background-color: black; /* Set black background */
+    height: 23px;
+    margin-right: 10px; /* Adds space between logo and text */
+}
+
+.btn-primary-googlepay:active {
+    transform: translateY(0);
+}

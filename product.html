@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Template - Product Page</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Wageify Logo" />
+          </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="#">Contact</a>
+         
+        </nav>
+        <div class="auth-links">
+            <a href="product.html">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Product Page -->
+    <div class="product-page">
+        <div class="product-image">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="1.png" alt="Excel Template Image 1" class="carousel-image">
+                    <img src="2.png" alt="Excel Template Image 2" class="carousel-image">
+                    <img src="3.png" alt="Excel Template Image 3" class="carousel-image">
+                    <img src="4.png" alt="Excel Template Image 4" class="carousel-image">
+                </div>
+                <!-- Carousel Arrows -->
+                <button id="prev" class="carousel-arrow left-arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next" class="carousel-arrow right-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>2025 Payroll Calculator with Pay Stubs | Quarterly, Monthly, Weekly Remittance Records</h1>
+            <p class="price">$29.99</p>
+            <div class="payment-buttons">
+                <a href="https://www.paypal.com/ncp/payment/S5UG824DTPJ4N" target="_blank">
+    <button class="btn-primary-paypal">
+        <img src="paypal.png" alt="Logo" class="btn-logo-paypal">
+    </button>
+</a>
+
+<a href="https://pay.google.com" target="_blank">
+    <button class="btn-primary-googlepay">
+        <img src="googlepay.png" alt="Logo" class="btn-logo-googlepay">
+    </button>
+</a>
+            </div>
+              
+              
+            
+            <ul class="features">
+                <li>🚀 Unlock Effortless Payroll Management! 💼</li>
+                <li>Streamline your payroll process with our 2025 Payroll Calculator! Whether you're running a small business or managing a large team, this tool has got you covered for all your payroll needs. 🧑‍💻💸</li>
+                <li>✨ Key Features:</li>
+                <li>- 🧮 Comprehensive Payroll Calculations: Calculate wages, taxes, and deductions easily for weekly, monthly, or quarterly periods.</li>
+                <li>- 💼 Pay Stubs Included: Generate detailed and professional pay stubs with just a click! Perfect for employee transparency.</li>
+                <li>- 📊 Remittance Records: Keep track of all your payments and contributions effortlessly – ideal for tax filing.</li>
+                <li>- 🔒 Secure & Reliable: Your sensitive data stays safe with top-notch encryption.</li>
+                <li>- 🏆 User-Friendly Interface: Easy-to-use, no need for advanced skills.</li>
+                <li> </li>
+                <li>🔥 Why You'll Love It:</li>
+                <li>- Save Time 🕒: No more manual calculations or errors.</li>
+                <li>- Stay Compliant ✅: Automatically follow tax laws and regulations for various countries.</li>
+                <li>- Perfect for Small Businesses & Entrepreneurs 👔: Designed with YOU in mind.</li>
+                <li> </li>
+                <li>Get your hands on this all-in-one payroll solution today and take control of your business finances like a pro! 📈</li>
+            </ul>
+           
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function updateCarousel() {
+            images.forEach((img, index) => {
+                img.style.display = index === currentIndex ? 'block' : 'none';
+            });
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+
+        // Initialize carousel with first image displayed
+        updateCarousel();
+    </script>
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</body>
+</html>
